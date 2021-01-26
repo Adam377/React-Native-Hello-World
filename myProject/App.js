@@ -1,12 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React, {Component} from 'react';
+//Week 1 Hello World
+import React, {Component, useState, useEffect} from 'react';
 import {Text, View} from 'react-native';
 
 class HelloWorldApp extends Component
@@ -15,10 +8,9 @@ class HelloWorldApp extends Component
 	{
 		let name = "Adam";
 		
-		return
-		(
+		return(
 			<View>
-				<SayHello name="Adam" />
+				<SayHello name="Ash" />
 			</View>
 		);
 	}
@@ -28,18 +20,15 @@ class SayHello extends Component
 {
 	render()
 	{
-		return
-		(
+		return(
 			<View>
-				<Text>
-					Hello {this.props.name}
-				</Text>
+				<Text>Hello {this.props.name}</Text>
 			</View>
 		);
 	}
 }
 
-export default HelloWorldApp;
+//export default HelloWorldApp;
 
 const Blink = (props) =>
 {
@@ -49,8 +38,7 @@ const Blink = (props) =>
 	{
 		const toggle = setInterval(() =>
 		{
-			setIsShowingText(!isShowingText);
-			
+			setIsShowingText(!isShowingText);			
 		}, 1000);
 		
 		return() => clearInterval(toggle);
@@ -66,8 +54,7 @@ const Blink = (props) =>
 
 const BlinkApp = () =>
 {
-	return
-	(
+	return(
 		<View style={{marginTop: 50}}>
 			<Blink text='I love to blink' />
 			<Blink text='Yes blinking is so great' />
